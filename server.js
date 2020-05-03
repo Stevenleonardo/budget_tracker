@@ -3,7 +3,7 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
 
-const PORT = 3000;
+const PORT = 8080;
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI ||"mongodb://<dbuser>:<dbpassword>@ds151048.mlab.com:51048/heroku_xl3zb62s", {
+mongoose.connect(process.env.MONGODB_URI ||"mongodb://rootdb1:Queens23!@ds151048.mlab.com:51048/heroku_xl3zb62s", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
